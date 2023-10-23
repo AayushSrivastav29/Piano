@@ -3,12 +3,12 @@ const volumeSlider = document.querySelector(".volume-slider input");
 const keysCheckbox = document.querySelector(".keys-checkbox input");
 
 let allKeys = [];
-let audio = new Audio(`tunes/a.wav`);
+let audio = new Audio(`tunes2/a.wav`);
 let isRecording = false;
 const recordedTunes = [];
 
 const playTune = (key) => {
-  audio.src = `tunes/${key}.wav`;
+  audio.src = `tunes2/${key}.wav`;
   audio.play();
 
   const clickedKey = document.querySelector(`[data-key="${key}"]`);
@@ -66,11 +66,11 @@ document.getElementById("playback-button").addEventListener("click", () => {
   }
 });
 
-function playRecordedTunes(tunes) {
+function playRecordedTunes(tunes2) {
   let index = 0;
   const playbackInterval = setInterval(() => {
-    if (index < tunes.length) {
-      playTune(tunes[index]);
+    if (index < tunes2.length) {
+      playTune(tunes2[index]);
       index++;
     } else {
       clearInterval(playbackInterval);
