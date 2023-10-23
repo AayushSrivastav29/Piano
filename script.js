@@ -92,8 +92,6 @@ function displayMessage(message) {
 
 // Function to trigger the confetti animation
 function triggerConfetti() {
-  startConfetti(); // Call the startConfetti function from the confetti library
-
-  // Optionally, you can add a timer to stop the confetti after a certain duration
-  setTimeout(stopConfetti, 5000); // Stop confetti after 5 seconds (adjust the duration as needed)
+  startConfetti(); 
+  setTimeout(stopConfetti, 5000); // Stop confetti after 5 seconds 
 }
